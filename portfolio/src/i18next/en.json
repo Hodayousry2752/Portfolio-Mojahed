@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "title": {
+    "part1": "Premium",
+    "highlight": "Digital",
+    "part2": "Experience",
+    "cta": "View Projects"
+  },
+  "hero": {
+    "titleA": "About Me",
+    "subtitle": "Software Engineer & Digital Media Specialist blending technology with cinematic storytelling."
+  },
+  "story": "I specialize in creating premium visual and digital experiences that merge technical precision with creative direction. From commercial photography to professional video production, my work focuses on delivering content that communicates brand identity with clarity and impact.",
+  "info": [
+    { "icon": "MapPin", "text": "Based in Cairo, Egypt" },
+    { "icon": "Laptop", "text": "Software Engineer & Digital Media Specialist" },
+    { "icon": "Film", "text": "Passionate about cinematic storytelling and visual design" },
+    { "icon": "Camera", "text": "Experienced in photography, video, and frontend development" }
+  ],
+  "highlights": {
+    "photography": "Commercial & product photography with cinematic lighting.",
+    "video": "Professional video editing and visual storytelling.",
+    "development": "Frontend development with motion-driven interfaces."
+  },
+  "slides": [
+    "Precision cinematic stabilization for smooth professional footage.",
+    "Capture high-quality aerial views with cinematic motion.",
+    "Advanced gimbal motion for filmmakers and creators.",
+    "Detailed shots capturing every angle with clarity.",
+    "Versatile product shots for premium web experiences.",
+    "High-quality visual storytelling inspired by DJI."
+  ]
+}
