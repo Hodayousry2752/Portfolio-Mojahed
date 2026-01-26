@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 96%;
+
+    --card: 0 0% 7%;
+    --border: 0 0% 14%;
+
+    --primary: 145 80% 45%;
+    --primary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 20%;
+    --accent: 145 80% 45%;
+  }
+
+  [dir="rtl"] {
+    font-family: "Cairo", sans-serif;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
+  }
+}
