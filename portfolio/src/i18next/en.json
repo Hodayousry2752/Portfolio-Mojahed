@@ -95,5 +95,21 @@
         ]
       }
     ]
+  },
+  "contact": {
+  "title": "Get In Touch",
+  "subtitle": "Feel free to reach out for creative projects or technical collaborations",
+  "phone": "Phone Number",
+  "whatsapp": "WhatsApp",
+  "email": "Email Address",
+  "socials": "Social Links",
+  "note": "Available for professional collaborations"
+},
+"footer": {
+    "description": "Frontend developer crafting modern, high-quality digital experiences.",
+    "contact": "Contact",
+    "follow": "Follow",
+    "rights": "Mojahed Asha. All rights reserved.",
+    "signature": "Built with precision & taste."
   }
 }

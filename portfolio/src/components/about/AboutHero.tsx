@@ -21,6 +21,14 @@ export default function AboutHero() {
   const { t } = useTranslation();
   const [current, setCurrent] = useState(0);
 
+  // Preload all images without hidingهم
+  useEffect(() => {
+    profileImages.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % profileImages.length);

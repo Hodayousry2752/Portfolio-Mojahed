@@ -10,7 +10,6 @@ import img4 from "../assets/images/12.png";
 import img5 from "../assets/images/h7.jpg";
 import img6 from "../assets/images/6.jpg";
 
-
 const slides = [
   { img: img1, key: "slide1" },
   { img: img2, key: "slide2" },
@@ -24,6 +23,14 @@ export default function HomeCinematic() {
   const { t } = useTranslation();
   const navbarHeight = 80;
   const [current, setCurrent] = useState(0);
+
+  // Preload all slides to prevent lag
+  useEffect(() => {
+    slides.forEach((slide) => {
+      const img = new Image();
+      img.src = slide.img;
+    });
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -86,18 +93,14 @@ export default function HomeCinematic() {
 
         {/* CTA Button */}
         <motion.a
-  href="#projects"
-  whileHover={{
-    scale: 1.05,
-    color: "#000",
-  }}
-  whileTap={{ scale: 0.95 }}
-  className="mt-6 inline-block px-8 py-4 bg-primary/90 text-white font-semibold rounded-lg shadow-lg 
-              hover:shadow-2xl hover:bg-blur-lg border border-white transition transform-all duration-300"
->
-  {t("title.cta")}
-</motion.a>
-
+          href="#projects"
+          whileHover={{ scale: 1.05, color: "#000" }}
+          whileTap={{ scale: 0.95 }}
+          className="mt-6 inline-block px-8 py-4 bg-primary/90 text-white font-semibold rounded-lg shadow-lg 
+            hover:shadow-2xl hover:bg-blur-lg border border-white transition transform-all duration-300"
+        >
+          {t("title.cta")}
+        </motion.a>
       </motion.div>
 
       {/* Slider Controls */}
