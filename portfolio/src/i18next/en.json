@@ -19,12 +19,14 @@
   },
   "story": "I specialize in creating premium visual and digital experiences that merge technical precision with creative direction. From commercial photography to professional video production, my work focuses on delivering content that communicates brand identity with clarity and impact.",
   "info": [
-    { "icon": "MapPin", "text": "Based in Cairo, Egypt" },
-    { "icon": "Laptop", "text": "Software Engineer & Digital Media Specialist" },
-    { "icon": "Film", "text": "Passionate about cinematic storytelling and visual design" },
-    { "icon": "Camera", "text": "Experienced in photography, video, and frontend development" }
-  ],
+  { "icon": "MapPin", "text": "Based in Jordan" },
+  { "icon": "Laptop", "text": "Software Engineer & Digital Media Specialist" },
+  { "icon": "Film", "text": "Passionate about cinematic storytelling and visual design" },
+  { "icon": "Camera", "text": "Experienced in photography, video, and frontend development" }
+],
   "highlights": {
+    "title": "Highlights",
+    "subtitle": "A collection of skills and areas where I excel to deliver premium digital content",
     "photography": "Commercial & product photography with cinematic lighting.",
     "video": "Professional video editing and visual storytelling.",
     "development": "Frontend development with motion-driven interfaces."
@@ -36,5 +38,62 @@
     "Detailed shots capturing every angle with clarity.",
     "Versatile product shots for premium web experiences.",
     "High-quality visual storytelling inspired by DJI."
-  ]
+  ],
+  "skills": {
+    "title": "Tools & Skills",
+    "subtitle": "A blend of professional gear and technical expertise powering premium production",
+    "sections": {
+      "gear": "Production Gear",
+      "software": "Editing & Design Software",
+      "development": "Development Skills"
+    },
+    "gear": [
+      "Sony Alpha A7 IV",
+      "DJI 360 Camera",
+      "DJI Mavic 3 Pro Drone",
+      "DJI RS 4 Gimbal",
+      "Professional Lighting Equipment",
+      "DJI Microphones"
+    ],
+    "software": [
+      "Adobe Premiere Pro",
+      "Adobe After Effects",
+      "DaVinci Resolve",
+      "Adobe Photoshop",
+      "Adobe Illustrator"
+    ],
+    "development": [
+      "React & TypeScript",
+      "Framer Motion Animations",
+      "Responsive UI Design",
+      "Frontend Performance Optimization"
+    ]
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "subtitle": "A career blending software engineering with cinematic visual creativity",
+    "timeline": [
+      {
+        "role": "Software Engineer & Digital Media Specialist",
+        "company": "Freelance",
+        "period": "2021 - Present",
+        "points": [
+          "Delivered cinematic commercial and product photography projects.",
+          "Produced short-form video content tailored for social media platforms.",
+          "Designed and developed interactive frontend experiences using React & TypeScript.",
+          "Combined technical execution with visual direction to achieve real marketing goals."
+        ]
+      },
+      {
+        "role": "Visual Content Creator",
+        "company": "Commercial & Advertising Projects",
+        "period": "2019 - 2021",
+        "points": [
+          "Produced high-quality visual content for commercial brands.",
+          "Managed lighting, composition, and creative direction.",
+          "Edited videos using Adobe Premiere Pro and After Effects."
+        ]
+      }
+    ]
+  }
 }

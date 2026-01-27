@@ -28,20 +28,18 @@ export default function AboutHero() {
     return () => clearInterval(interval);
   }, []);
 
-  // جلب info من الترجمة
   const info = t("info", { returnObjects: true }) as Array<{ icon: string; text: string }>;
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center px-6">
+    <section className="relative pt-32 sm:pt-40 md:pt-48 min-h-[90vh] flex items-center justify-center px-6">
       <div className="grid md:grid-cols-2 gap-14 max-w-6xl items-center">
         
-        {/* TEXT + INFO من الترجمة */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight text-white">
             {t("hero.titleA")}
           </h1>
           <p className="mt-4 text-white/70 text-lg max-w-xl">

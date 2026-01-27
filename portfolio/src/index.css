@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;700&display=swap');
+
+/* Tailwind base imports */
 @import "tailwindcss";
 
 @layer base {
@@ -23,5 +26,6 @@
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     -webkit-font-smoothing: antialiased;
+    font-family: "Inter", "Cairo", sans-serif;
   }
 }
