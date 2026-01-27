@@ -39,14 +39,14 @@ export default function ExperiencePage() {
   };
 
   return (
-    <section className="relative py-28 bg-black overflow-hidden">
+    <section className="relative py-28 bg-black overflow-hidden px-4 sm:px-6">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false }}
         transition={{ duration: 0.7 }}
-        className="text-center mb-24 px-6"
+        className="text-center mb-24"
       >
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
           {t("experience.title")}
@@ -77,7 +77,7 @@ export default function ExperiencePage() {
               {/* Main Card */}
               <motion.div
                 whileHover={{ scale: 1.04 }}
-                className="bg-zinc-900/70 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-zinc-800 shadow-lg w-full md:w-5/12"
+                className="bg-zinc-900/70 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-zinc-800 shadow-lg w-full md:w-5/12 mx-2 sm:mx-0"
               >
                 <div className="flex items-center gap-3 mb-3">
                   <div className="bg-primary p-2 rounded-full w-10 h-10 flex-shrink-0 flex items-center justify-center">

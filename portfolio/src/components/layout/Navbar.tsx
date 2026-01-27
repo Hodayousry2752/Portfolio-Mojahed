@@ -1,7 +1,7 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram, Facebook, Linkedin, X as XSocial } from "lucide-react";
 import { useState } from "react";
 import LanguageSwitcher from "../common/LanguageSwitcher";
 import logo from "../../assets/images/logo.jfif";
@@ -18,6 +18,13 @@ export default function Navbar() {
     { to: "/projects", label: t("nav.projects") },
     { to: "/experience", label: t("nav.experience") },
     { to: "/contact", label: t("nav.contact") },
+  ];
+
+  const socials = [
+    { icon: Instagram, link: "https://instagram.com/mojahed.pro" },
+    { icon: Facebook, link: "https://facebook.com/mojahed.pro90" },
+    { icon: Linkedin, link: "https://www.linkedin.com/in/mojahed-asha-7a03b4102" },
+    { icon: XSocial, link: "https://x.com/MojahedAsha" },
   ];
 
   return (
@@ -121,20 +128,22 @@ export default function Navbar() {
               transition={{ duration: 0.4, ease: "easeOut" }}
               className="p-10 flex flex-col min-h-screen"
             >
+              {/* TOP ROW: Logo + Close + Language */}
               <div className="flex justify-between items-center">
-                <img
-                  src={logo}
-                  alt="Logo"
-                  className="h-8 w-auto object-contain"
-                />
-                <motion.button
-                  whileHover={{ rotate: 90, scale: 1.1 }}
-                  onClick={() => setMobileOpen(false)}
-                >
-                  <X size={32} />
-                </motion.button>
+                <img src={logo} alt="Logo" className="h-8 w-auto object-contain" />
+
+                <div className="flex items-center gap-4">
+                  <LanguageSwitcher />
+                  <motion.button
+                    whileHover={{ rotate: 90, scale: 1.1 }}
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    <X size={32} />
+                  </motion.button>
+                </div>
               </div>
 
+              {/* LINKS */}
               <div className="flex flex-col gap-12 mt-24">
                 {links.map((link, i) => (
                   <motion.div
@@ -154,8 +163,34 @@ export default function Navbar() {
                 ))}
               </div>
 
-              <div className="mt-auto">
-                <LanguageSwitcher />
+              {/* SOCIAL ICONS */}
+              <div className="mt-auto flex gap-6">
+                {socials.map((item, i) => (
+                  <motion.a
+                    key={i}
+                    href={item.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    whileHover={{ y: -3 }}
+                    className="group relative"
+                  >
+                    <div
+                      className="relative w-11 h-11 rounded-xl
+                        bg-zinc-900/70 backdrop-blur
+                        border border-zinc-800
+                        flex items-center justify-center
+                        overflow-hidden
+                        transition-all"
+                    >
+                      <span
+                        className="absolute inset-0 opacity-0 group-hover:opacity-100
+                          bg-gradient-to-r from-primary/20 to-pink-500/20
+                          transition-opacity"
+                      />
+                      <item.icon className="relative w-5 h-5 text-zinc-400 group-hover:text-primary transition-colors" />
+                    </div>
+                  </motion.a>
+                ))}
               </div>
             </motion.div>
           </motion.div>
