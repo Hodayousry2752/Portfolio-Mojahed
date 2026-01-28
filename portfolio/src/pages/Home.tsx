@@ -66,12 +66,12 @@ export default function HomeCinematic() {
 
       {/* Hero Text */}
       <motion.div
-        className="relative z-10 text-center px-6 md:px-20 max-w-3xl"
+        className="relative z-10 text-center px-4 md:px-20 max-w-3xl"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white leading-snug md:leading-tight">
           {t("title.part1")}{" "}
           <span className="text-primary animate-pulse">{t("title.highlight")}</span>{" "}
           {t("title.part2")}
@@ -85,7 +85,7 @@ export default function HomeCinematic() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.8 }}
-            className="mt-4 md:mt-6 text-white/85 text-lg md:text-xl max-w-xl mx-auto"
+            className="mt-5 md:mt-4 text-white/85 text-sm sm:text-base md:text-xl max-w-xl mx-auto"
           >
             {t(`slides.${current}`)}
           </motion.p>
@@ -96,8 +96,8 @@ export default function HomeCinematic() {
           href="#projects"
           whileHover={{ scale: 1.05, color: "#000" }}
           whileTap={{ scale: 0.95 }}
-          className="mt-6 inline-block px-8 py-4 bg-primary/90 text-white font-semibold rounded-lg shadow-lg 
-            hover:shadow-2xl hover:bg-blur-lg border border-white transition transform-all duration-300"
+          className="mt-4 md:mt-6 inline-block px-6 md:px-8 py-3 md:py-4 bg-primary/90 text-white font-semibold rounded-lg shadow-lg 
+            hover:shadow-2xl hover:bg-blur-lg border border-white transition transform-all duration-300 text-sm sm:text-base md:text-lg"
         >
           {t("title.cta")}
         </motion.a>

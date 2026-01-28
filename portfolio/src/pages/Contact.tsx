@@ -142,15 +142,16 @@ export default function ContactPage() {
                   target="_blank"
                   rel="noreferrer"
                   whileHover={{ scale: 1.06 }}
-                  className="flex items-center gap-3 bg-black/40 border border-zinc-800 rounded-xl p-4"
+                  className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 bg-black/40 border border-zinc-800 rounded-xl p-4"
                 >
                   <motion.div
                     animate={{ y: [0, -6, 0] }}
                     transition={{ duration: 2, repeat: Infinity }}
+                    className="flex-shrink-0"
                   >
                     <social.icon className="w-5 h-5 text-primary" />
                   </motion.div>
-                  <span className="text-zinc-200">{social.label}</span>
+                  <span className="text-zinc-200 text-center sm:text-left break-words">{social.label}</span>
                 </motion.a>
               ))}
             </div>

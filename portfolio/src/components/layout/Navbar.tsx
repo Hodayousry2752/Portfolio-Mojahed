@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Menu, X, Instagram, Facebook, Linkedin, X as XSocial } from "lucide-react";
@@ -9,6 +9,7 @@ import logo from "../../assets/images/logo.jfif";
 export default function Navbar() {
   const { t } = useTranslation();
   const { pathname } = useLocation();
+  const navigate = useNavigate(); // <-- added
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const links = [
@@ -54,6 +55,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.08 }}
             transition={{ type: "spring", stiffness: 200 }}
             className="cursor-pointer flex items-center"
+            onClick={() => navigate("/")} // <-- added navigate to home
           >
             <img
               src={logo}
@@ -130,7 +132,15 @@ export default function Navbar() {
             >
               {/* TOP ROW: Logo + Close + Language */}
               <div className="flex justify-between items-center">
-                <img src={logo} alt="Logo" className="h-8 w-auto object-contain" />
+                <motion.img
+                  src={logo}
+                  alt="Logo"
+                  className="h-8 w-auto object-contain cursor-pointer"
+                  onClick={() => {
+                    navigate("/"); // <-- navigate to home on mobile logo click
+                    setMobileOpen(false);
+                  }}
+                />
 
                 <div className="flex items-center gap-4">
                   <LanguageSwitcher />
