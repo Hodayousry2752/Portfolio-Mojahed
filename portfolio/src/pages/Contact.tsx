@@ -15,22 +15,22 @@ export default function ContactPage() {
   const { t } = useTranslation();
 
   const contacts = [
-    {
-      icon: Phone,
-      label: t("contact.phone"),
-      value: "+962 79034901",
-    },
-    {
-      icon: MessageCircle,
-      label: t("contact.whatsapp"),
-      value: "+962 79034901",
-    },
-    {
-      icon: Mail,
-      label: t("contact.email"),
-      value: "mojahedasha@gmail.com",
-    },
-  ];
+  {
+    icon: Phone,
+    label: t("contact.phone"),
+    value: "+962 790 304 901", 
+  },
+  {
+    icon: MessageCircle,
+    label: t("contact.whatsapp"),
+    value: "+962 790 304 901", 
+  },
+  {
+    icon: Mail,
+    label: t("contact.email"),
+    value: "mojahedasha@gmail.com",
+  },
+];
 
   const socials = [
     {
