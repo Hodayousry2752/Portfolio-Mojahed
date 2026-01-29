@@ -35,7 +35,7 @@ export default function Navbar() {
         initial={{ y: -120, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
-        className="fixed top-0 inset-x-0 z-50 bg-neutral-900/40 backdrop-blur-xl border-b border-white/10"
+        className="fixed top-0 inset-x-0 z-50 bg-black backdrop-blur-xl border-b border-white/10"
       >
         {/* Floating particles */}
         <motion.span
@@ -60,7 +60,7 @@ export default function Navbar() {
             <img
               src={logo}
               alt="Logo"
-              className="h-8 md:h-9 w-auto object-contain drop-shadow-[0_0_12px_rgba(0,255,150,0.25)]"
+              className="h-8 md:h-9 w-auto object-contain "
             />
           </motion.div>
 

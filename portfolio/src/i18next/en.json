@@ -15,15 +15,50 @@
   },
   "hero": {
     "titleA": "About Me",
-    "subtitle": "Software Engineer & Digital Media Specialist blending technology with cinematic storytelling."
+    "subtitle": "Software Engineer & Digital Media Specialist, delivering integrated solutions that blend technology and creativity through premium commercial photography and professional content creation."
   },
-  "story": "I specialize in creating premium visual and digital experiences that merge technical precision with creative direction. From commercial photography to professional video production, my work focuses on delivering content that communicates brand identity with clarity and impact.",
+  "heroHighlights": {
+    "items": [
+      {
+        "title": "Tech Meets Creativity",
+        "description": "Transforming technical ideas into visually compelling digital content."
+      },
+      {
+        "title": "Cinematic Direction",
+        "description": "Professional photography and video production with cinematic quality."
+      },
+      {
+        "title": "End-to-End Solutions",
+        "description": "From concept to execution using modern tools and workflows."
+      },
+      {
+        "title": "Tailored Content",
+        "description": "Custom-made content optimized for platforms and user experience."
+      }
+    ]
+  },
+  "fullStory": {
+    "title": "About My Journey",
+    "part1Short": "I'm a Software Engineer & Digital Media Specialist delivering premium visual content.",
+    "part1": "I am a Software Engineer and Digital Media Specialist, focused on creating premium visual content that blends technical precision with creative storytelling. My work centers on commercial photography, professional video editing, and tailored social media content that helps brands communicate their identity clearly and effectively.",
+    "part2Short": "I produce impactful short videos tailored for social media platforms.",
+    "part2": "I bring hands-on experience across a wide range of projects, from advertising and product photography to producing short, impactful videos designed specifically for social media platforms, with strong attention to detail, lighting, and visual direction.",
+    "part3Short": "I combine technical expertise with visual creativity.",
+    "part3": "What sets me apart is my ability to merge a strong technical background with visual creativity, allowing me to understand client objectives and transform ideas into high-quality content built for real marketing performance—not just visually appealing videos.",
+    "part4Short": "I work with professional-grade equipment ensuring top quality.",
+    "part4": "I work with professional-grade equipment to ensure exceptional image and sound quality, offering full flexibility in production, whether in studio environments or on-location shoots.",
+    "showMore": "Show More",
+    "showLess": "Show Less"
+  },
+  "story": "I specialize in creating premium visual and digital experiences that merge technical precision with creative direction."
+
+  ,
   "info": [
-  { "icon": "MapPin", "text": "Based in Jordan" },
-  { "icon": "Laptop", "text": "Software Engineer & Digital Media Specialist" },
-  { "icon": "Film", "text": "Passionate about cinematic storytelling and visual design" },
-  { "icon": "Camera", "text": "Experienced in photography, video, and frontend development" }
-],
+    { "icon": "MapPin", "text": "Based in Jordan" },
+    { "icon": "Laptop", "text": "Software Engineer & Digital Media Specialist" },
+    { "icon": "Film", "text": "Passionate about cinematic storytelling and visual design" },
+    { "icon": "Camera", "text": "Experienced in photography, video, and frontend development" }
+  ],
   "highlights": {
     "title": "Highlights",
     "subtitle": "A collection of skills and areas where I excel to deliver premium digital content",
@@ -48,12 +83,12 @@
       "development": "Development Skills"
     },
     "gear": [
-      "Sony Alpha A7 IV",
+      "Sony Alpha 7 IV",
       "DJI 360 Camera",
       "DJI Mavic 3 Pro Drone",
-      "DJI RS 4 Gimbal",
+      "DJI RS 4",
       "Professional Lighting Equipment",
-      "DJI Microphones"
+      "DJI Microphone"
     ],
     "software": [
       "Adobe Premiere Pro",
@@ -82,7 +117,8 @@
           "Produced short-form video content tailored for social media platforms.",
           "Designed and developed interactive frontend experiences using React & TypeScript.",
           "Combined technical execution with visual direction to achieve real marketing goals."
-        ]
+        ],
+        "icon": "laptop"
       },
       {
         "role": "Visual Content Creator",
@@ -91,22 +127,24 @@
         "points": [
           "Produced high-quality visual content for commercial brands.",
           "Managed lighting, composition, and creative direction.",
-          "Edited videos using Adobe Premiere Pro and After Effects."
-        ]
+          "Edited videos using Adobe Premiere Pro and After Effects.",
+          "Created tailored content for social media platforms."
+        ],
+        "icon": "camera"
       }
     ]
   },
   "contact": {
-  "title": "Get In Touch",
-  "subtitle": "Feel free to reach out for creative projects or technical collaborations",
-  "phone": "Phone Number",
-  "whatsapp": "WhatsApp",
-  "email": "Email Address",
-  "socials": "Social Links",
-  "note": "Available for professional collaborations"
-},
-"footer": {
-    "description": "Frontend developer crafting modern, high-quality digital experiences.",
+    "title": "Get In Touch",
+    "subtitle": "Feel free to reach out for creative projects or technical collaborations",
+    "phone": "Phone Number",
+    "whatsapp": "WhatsApp",
+    "email": "Email Address",
+    "socials": "Social Links",
+    "note": "Available for professional collaborations"
+  },
+  "footer": {
+    "description": "Software Engineer & Digital Media Specialist, delivering integrated solutions that blend technology and creativity through premium commercial photography and professional content creation.",
     "contact": "Contact",
     "follow": "Follow",
     "rights": "Mojahed Asha. All rights reserved.",
