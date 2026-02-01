@@ -1,7 +1,14 @@
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { Menu, X, Instagram, Facebook, Linkedin, X as XSocial } from "lucide-react";
+import {
+  Menu,
+  X,
+  Instagram,
+  Facebook,
+  Linkedin,
+  X as XSocial,
+} from "lucide-react";
 import { useState } from "react";
 import LanguageSwitcher from "../common/LanguageSwitcher";
 import logo from "../../assets/images/logo.jfif";
@@ -9,7 +16,7 @@ import logo from "../../assets/images/logo.jfif";
 export default function Navbar() {
   const { t } = useTranslation();
   const { pathname } = useLocation();
-  const navigate = useNavigate(); // <-- added
+  const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const links = [
@@ -18,6 +25,7 @@ export default function Navbar() {
     { to: "/skills", label: t("nav.skills") },
     { to: "/projects", label: t("nav.projects") },
     { to: "/experience", label: t("nav.experience") },
+    { to: "/gallary", label: t("nav.gallery") }, // ✅ Gallery
     { to: "/contact", label: t("nav.contact") },
   ];
 
@@ -55,12 +63,12 @@ export default function Navbar() {
             whileHover={{ scale: 1.08 }}
             transition={{ type: "spring", stiffness: 200 }}
             className="cursor-pointer flex items-center"
-            onClick={() => navigate("/")} // <-- added navigate to home
+            onClick={() => navigate("/")}
           >
             <img
               src={logo}
               alt="Logo"
-              className="h-8 md:h-9 w-auto object-contain "
+              className="h-8 md:h-9 w-auto object-contain"
             />
           </motion.div>
 
@@ -130,14 +138,14 @@ export default function Navbar() {
               transition={{ duration: 0.4, ease: "easeOut" }}
               className="p-10 flex flex-col min-h-screen"
             >
-              {/* TOP ROW: Logo + Close + Language */}
+              {/* TOP */}
               <div className="flex justify-between items-center">
                 <motion.img
                   src={logo}
                   alt="Logo"
-                  className="h-8 w-auto object-contain cursor-pointer"
+                  className="h-8 w-auto cursor-pointer"
                   onClick={() => {
-                    navigate("/"); // <-- navigate to home on mobile logo click
+                    navigate("/");
                     setMobileOpen(false);
                   }}
                 />
@@ -173,7 +181,7 @@ export default function Navbar() {
                 ))}
               </div>
 
-              {/* SOCIAL ICONS */}
+              {/* SOCIALS */}
               <div className="mt-auto flex gap-6">
                 {socials.map((item, i) => (
                   <motion.a
@@ -182,21 +190,10 @@ export default function Navbar() {
                     target="_blank"
                     rel="noreferrer"
                     whileHover={{ y: -3 }}
-                    className="group relative"
+                    className="group"
                   >
-                    <div
-                      className="relative w-11 h-11 rounded-xl
-                        bg-zinc-900/70 backdrop-blur
-                        border border-zinc-800
-                        flex items-center justify-center
-                        overflow-hidden
-                        transition-all"
-                    >
-                      <span
-                        className="absolute inset-0 opacity-0 group-hover:opacity-100
-                          bg-gradient-to-r from-primary/20 to-pink-500/20
-                          transition-opacity"
-                      />
+                    <div className="relative w-11 h-11 rounded-xl bg-zinc-900/70 border border-zinc-800 flex items-center justify-center overflow-hidden">
+                      <span className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-primary/20 to-pink-500/20 transition-opacity" />
                       <item.icon className="relative w-5 h-5 text-zinc-400 group-hover:text-primary transition-colors" />
                     </div>
                   </motion.a>
