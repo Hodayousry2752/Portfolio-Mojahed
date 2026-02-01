@@ -5,6 +5,7 @@
     "skills": "Skills",
     "projects": "Projects",
     "experience": "Experience",
+    "gallery": "Gallery",
     "contact": "Contact"
   },
   "title": {
@@ -17,6 +18,11 @@
     "titleA": "About Me",
     "subtitle": "Software Engineer & Digital Media Specialist, delivering integrated solutions that blend technology and creativity through premium commercial photography and professional content creation."
   },
+  "aboutNarrative": {
+  "label": "Professional Overview",
+  "main": "Software Engineer & Digital Media Specialist, focused on delivering integrated solutions that merge technical precision with creative storytelling. My work centers on premium commercial photography and professional content creation that helps brands communicate their identity clearly and effectively."
+}
+,
   "heroHighlights": {
     "items": [
       {

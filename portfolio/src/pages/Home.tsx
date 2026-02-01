@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import AboutNarrativeSection from "../components/home/AboutNarrativeSection";
 
 import img1 from "../assets/images/h1.jpg";
 import img2 from "../assets/images/h2.jpg";
@@ -43,6 +44,7 @@ export default function HomeCinematic() {
   const nextSlide = () => setCurrent((prev) => (prev + 1) % slides.length);
 
   return (
+    <>
     <section
       className="relative flex items-center justify-center overflow-hidden"
       style={{ minHeight: `calc(100vh - ${navbarHeight}px)` }}
@@ -117,5 +119,8 @@ export default function HomeCinematic() {
         <ChevronRight size={24} />
       </button>
     </section>
+      <AboutNarrativeSection/>
+  </>
+
   );
 }
