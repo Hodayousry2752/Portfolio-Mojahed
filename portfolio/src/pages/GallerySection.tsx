@@ -1,13 +1,13 @@
-import { motion } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Eye } from "lucide-react";
 
-import g1 from "../assets/images/h1.jpg";
-import g2 from "../assets/images/h1.jpg";
-import g3 from "../assets/images/h1.jpg";
-import g4 from "../assets/images/h1.jpg";
-import g5 from "../assets/images/h1.jpg";
-import g6 from "../assets/images/h1.jpg";
+import g1 from "../assets/images/8.png";
+import g2 from "../assets/images/9.jpg";
+import g3 from "../assets/images/10.jpg";
+import g4 from "../assets/images/11.png";
+import g5 from "../assets/images/imag 2.png";
+import g6 from "../assets/images/1.png";
 
 const images = [
   { src: g1, title: "Commercial Shoot" },
@@ -33,7 +33,7 @@ const item = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: easeOut }, // ✅ تصحيح ease
   },
 };
 
@@ -53,7 +53,7 @@ export default function GallerySection() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.6, ease: easeOut }}
         className="max-w-6xl mx-auto text-center mb-16"
       >
         <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
@@ -87,7 +87,7 @@ export default function GallerySection() {
               alt={img.title}
               className="w-full h-[320px] object-cover"
               whileHover={{ scale: 1.08 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
+              transition={{ duration: 0.6, ease: easeOut }} // ✅ تصحيح ease
             />
 
             {/* overlay */}
@@ -103,9 +103,7 @@ export default function GallerySection() {
             {/* content */}
             <div className="absolute inset-0 flex items-end p-6">
               <div className="w-full flex items-center justify-between opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                <span className="text-white font-medium">
-                  {img.title}
-                </span>
+                <span className="text-white font-medium">{img.title}</span>
 
                 <div className="w-10 h-10 rounded-xl bg-primary/20 backdrop-blur flex items-center justify-center">
                   <Eye className="w-5 h-5 text-primary" />
