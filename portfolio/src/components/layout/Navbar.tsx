@@ -7,7 +7,8 @@ import {
   Instagram,
   Facebook,
   Linkedin,
-  X as XSocial,
+  X as XSocial
+  //  Drone
 } from "lucide-react";
 import { useState } from "react";
 import LanguageSwitcher from "../common/LanguageSwitcher";
@@ -25,7 +26,8 @@ export default function Navbar() {
     { to: "/skills", label: t("nav.skills") },
     { to: "/projects", label: t("nav.projects") },
     { to: "/experience", label: t("nav.experience") },
-    { to: "/gallary", label: t("nav.gallery") }, // ✅ Gallery
+    // { to: "/gallary", label: t("nav.gallery") }, 
+    { to: "/drone", label: t("nav.drone") },
     { to: "/contact", label: t("nav.contact") },
   ];
 

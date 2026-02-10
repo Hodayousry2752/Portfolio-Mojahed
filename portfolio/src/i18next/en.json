@@ -6,6 +6,7 @@
     "projects": "Projects",
     "experience": "Experience",
     "gallery": "Gallery",
+    "drone": "Drone Gallery",
     "contact": "Contact"
   },
   "title": {
@@ -19,10 +20,9 @@
     "subtitle": "Software Engineer & Digital Media Specialist, delivering integrated solutions that blend technology and creativity through premium commercial photography and professional content creation."
   },
   "aboutNarrative": {
-  "label": "Professional Overview",
-  "main": "Software Engineer & Digital Media Specialist, focused on delivering integrated solutions that merge technical precision with creative storytelling. My work centers on premium commercial photography and professional content creation that helps brands communicate their identity clearly and effectively."
-}
-,
+    "label": "Professional Overview",
+    "main": "Software Engineer & Digital Media Specialist, focused on delivering integrated solutions that merge technical precision with creative storytelling. My work centers on premium commercial photography and professional content creation that helps brands communicate their identity clearly and effectively."
+  },
   "heroHighlights": {
     "items": [
       {
@@ -56,14 +56,24 @@
     "showMore": "Show More",
     "showLess": "Show Less"
   },
-  "story": "I specialize in creating premium visual and digital experiences that merge technical precision with creative direction."
-
-  ,
+  "story": "I specialize in creating premium visual and digital experiences that merge technical precision with creative direction.",
   "info": [
-    { "icon": "MapPin", "text": "Based in Jordan" },
-    { "icon": "Laptop", "text": "Software Engineer & Digital Media Specialist" },
-    { "icon": "Film", "text": "Passionate about cinematic storytelling and visual design" },
-    { "icon": "Camera", "text": "Experienced in photography, video, and frontend development" }
+    {
+      "icon": "MapPin",
+      "text": "Based in Jordan"
+    },
+    {
+      "icon": "Laptop",
+      "text": "Software Engineer & Digital Media Specialist"
+    },
+    {
+      "icon": "Film",
+      "text": "Passionate about cinematic storytelling and visual design"
+    },
+    {
+      "icon": "Camera",
+      "text": "Experienced in photography, video, and frontend development"
+    }
   ],
   "highlights": {
     "title": "Highlights",
@@ -155,5 +165,91 @@
     "follow": "Follow",
     "rights": "Mojahed Asha. All rights reserved.",
     "signature": "Built with precision & taste."
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Professional visual content across multiple industries",
+    "categories": {
+      "realEstate": {
+        "title": "Real Estate & Development",
+        "description": "Cinematic visual content that highlights property value and architectural spaces.",
+        "tags": ["Architectural Design", "Facades", "Interior Design"]
+      },
+      "commercial": {
+        "title": "Commercial & Retail Brands",
+        "description": "Creative content that reflects brand identity and enhances product experience.",
+        "tags": ["Retail Stores", "Shopping Centers", "Restaurants"]
+      },
+      "industrial": {
+        "title": "Industrial",
+        "description": "Professional visuals documenting industrial processes and production quality.",
+        "tags": ["Factories", "Warehouses", "Production Areas"]
+      },
+      "medical": {
+        "title": "Medical & Wellness",
+        "description": "Trust-driven visuals combining professionalism and aesthetic care.",
+        "tags": ["Hospitals", "Clinics", "Treatment Centers"]
+      },
+      "corporate": {
+        "title": "Corporate Coverage & Events",
+        "description": "Professional coverage of events, conferences, and sports occasions, capturing key moments and conveying the event's atmosphere through a dynamic style that reflects brand strength.",
+        "tags": ["Offices", "Companies", "Meeting Rooms"]
+      },
+      "motion": {
+        "title": "Motion Graphics",
+        "description": "",
+        "tags": ["Animation", "Graphics", "Visual Effects"]
+      }
+    },
+    "logoDesigns": {
+      "title": "Logo & Brand Designs",
+      "subtitle": "Professional logo designs that communicate brand identity"
+    },
+    "viewVideos": "View Videos",
+    "viewAll": "View All"
+  },
+  "droneGallery": {
+    "title": "Drone Photography Gallery",
+    "subtitle": "Professional 4K aerial shots",
+    "stats": {
+      "totalVideos": "Total Videos",
+      "totalDuration": "Total Duration",
+      "locations": "Locations",
+      "longestVideo": "Longest Video"
+    },
+    "searchPlaceholder": "Search drone videos...",
+    "sortBy": "Sort by",
+    "sortOptions": {
+      "date": "Latest",
+      "duration": "Duration",
+      "name": "Name",
+      "location": "Location"
+    },
+    "viewModes": {
+      "grid": "Grid View",
+      "list": "List View"
+    },
+    "videoInfo": {
+      "duration": "Duration",
+      "location": "Location",
+      "date": "Date",
+      "resolution": "Resolution",
+      "altitude": "Altitude"
+    },
+    "controls": {
+      "play": "Play",
+      "pause": "Pause",
+      "fullscreen": "Fullscreen",
+      "exitFullscreen": "Exit Fullscreen",
+      "download": "Download",
+      "share": "Share",
+      "close": "Close"
+    },
+    "noResults": "No videos match your search",
+    "resetSearch": "Show all videos",
+    "loading": "Loading video",
+    "featured": "Featured",
+    "comingSoon": "Upcoming project?",
+    "contactCta": "Let's work together to create stunning drone content for your project"
   }
 }
