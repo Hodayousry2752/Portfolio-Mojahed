@@ -116,31 +116,36 @@ return toSeconds(b.duration || "0:00") - toSeconds(a.duration || "0:00");
   ];
 
   const handlePlayVideo = (video: any) => {
-    setSelectedVideo(video);
-    setIsLoading(true);
-    setIsPlaying(false);
-    setCurrentTime(0);
-    setShowControls(true);
-    
-    setTimeout(() => {
-      setIsLoading(false);
-      setIsPlaying(true);
-      if (videoRef.current) {
-        videoRef.current.play();
-      }
-    }, 500);
-  };
+  setSelectedVideo(video);
+  setIsLoading(true);
+  setIsPlaying(false);
+  setCurrentTime(0);
+  setShowControls(true);
+
+  requestAnimationFrame(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(() => {
+      });
+    }
+  });
+};
+
 
   const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
+  if (!videoRef.current) return;
+
+  videoRef.current.muted = false;
+
+  if (isPlaying) {
+    videoRef.current.pause();
+  } else {
+    videoRef.current.play();
+  }
+
+  setIsPlaying(!isPlaying);
+};
+
 
   const handleTimeUpdate = () => {
     if (videoRef.current) {
@@ -707,17 +712,23 @@ const parts = (duration || "0:00").split(":").map(Number);
                   </div>
                 )}
 
-                <video
-                  ref={videoRef}
-                  src={selectedVideo.videoUrl}
-                  className={`w-full h-full ${isFullscreen ? 'object-cover' : 'object-contain'}`}
-                  onTimeUpdate={handleTimeUpdate}
-                  onEnded={() => setIsPlaying(false)}
-                  onPlay={() => setIsPlaying(true)}
-                  onPause={() => setIsPlaying(false)}
-                >
-                  {isRTL ? "متصفحك لا يدعم تشغيل الفيديو." : "Your browser does not support video playback."}
-                </video>
+               <video
+  ref={videoRef}
+  src={selectedVideo.videoUrl}
+  muted
+  playsInline
+  preload="metadata"
+  className={`w-full h-full ${isFullscreen ? 'object-cover' : 'object-contain'}`}
+  onTimeUpdate={handleTimeUpdate}
+  onLoadedMetadata={() => {
+    setIsLoading(false);
+    setCurrentTime(0);
+  }}
+  onEnded={() => setIsPlaying(false)}
+  onPlay={() => setIsPlaying(true)}
+  onPause={() => setIsPlaying(false)}
+/>
+
 
                 {/* Center Play Button */}
                 {(!isPlaying || showControls) && (
